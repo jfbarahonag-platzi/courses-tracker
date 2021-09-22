@@ -26,7 +26,7 @@ new Vue({
             //check the list
             for (const c of this.courses) {
                 // Compare the titles
-                if (c.title === course.title) {
+                if (c.title.toUpperCase() === course.title.toUpperCase()) {
                     return true
                 }
             }
@@ -36,7 +36,7 @@ new Vue({
 
         modifyCourseTime(course) {
             for (const c of this.courses) {
-                if (c.title === course.title) {
+                if (c.title.toUpperCase() === course.title.toUpperCase()) {
                     
                     c.time = parseInt(c.time, 10) + parseInt(course.time, 10)
                     console.log(c);
@@ -65,7 +65,10 @@ new Vue({
                 return
             }
 
-            const courseObj = {title: this.title, time: parseInt(this.time, 10)}
+            const courseObj = {
+                title: this.title, 
+                time: parseInt(this.time, 10)
+            }
 
             console.log(courseObj)
 

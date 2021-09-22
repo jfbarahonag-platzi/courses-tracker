@@ -30,10 +30,12 @@
             <h3>Lista de Cursos</h3>
             <p class="red">Aun no has realizado cursos</p>
             <div>
-                <ol>
+                <ul>
                     <!-- Lista de cursos -->
-                    <li v-for="course in courses">{{course}}</li>
-                </ol>
+                    <li v-for="(course, idx) in courses" v-bind:key="course.title">
+                        {{course.title}} - {{course.time}}
+                    </li>
+                </ul>
                 <hr />
                 <p>
                     Llevo <strong>{{ totalTime }}</strong> horas aprendiendo en Platzi.
