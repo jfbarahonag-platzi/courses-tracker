@@ -17,13 +17,13 @@
         </h1>
         <fieldset>
             <p>
-                <input type="text" placeholder="Titulo del curso" />
+                <input v-model="title" type="text" placeholder="Titulo del curso" />
             </p>
             <p>
-                <input type="number" placeholder="Horas" />
+                <input v-model="time" type="number" placeholder="Horas" />
             </p>
             <p>
-                <button>Guardar Curso</button>
+                <button v-on:click='addCourse'>Guardar Curso</button>
             </p>
         </fieldset>
         <div>
@@ -32,6 +32,7 @@
             <div>
                 <ol>
                     <!-- Lista de cursos -->
+                    <li v-for="course in courses">{{course}}</li>
                 </ol>
                 <hr />
                 <p>
@@ -41,6 +42,9 @@
             </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
