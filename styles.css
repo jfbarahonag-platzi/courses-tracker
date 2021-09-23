@@ -1,8 +1,41 @@
 html {
     padding: 20px;
-    color  : #3d3d3d;
+    color  : #cccccc;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #213744;
 }
 
 .red {
     color: tomato;
+}
+
+.card {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    border: 1px #15c60c4d solid;
+}
+
+.card > p > input {
+    border: none;
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+
+.card > p > button {
+    border: none;
+    color: #1afd0e;
+    border: 1px #16c60c solid;
+    background-color: inherit;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
